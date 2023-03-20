@@ -9,6 +9,11 @@
 .width100 { width: 100%; }
 .height100 { height: 100% ;}
 .min-height { min-height: 31.25rem; }
+.height250  { height: 250px; }
+.height { height: 187.5rem; }
+
+.text-center { text-align: center; }
+.line-height { line-height: 1.4; }
 
 h1 { font-size: 5rem; }
 h2 { font-size: 2.5rem; }
@@ -20,6 +25,7 @@ h3 { font-size: 1.5625rem; }
 .bg-white { background-color: white; }
 .bg-softpurple { background-color: #9792e4; }
 .bg-softdark { background-color: #333333; }
+.bg-azure { background-color: #b5ddff; }
 
 /* COLOR  */
 
@@ -29,26 +35,20 @@ h3 { font-size: 1.5625rem; }
 .color-ultrasoftpurple { background-color:  #cfcef2; }
 .color-grey { background-color:  #737373; }
 
-/* FLEX  */
-
-.flex { display: flex; } 
-.gap { gap: 1rem; }
-.wrap { flex-wrap: wrap; }
-.space-between { justify-content: space-between; }
-.align-items-center { align-items: center; }
-
 /* BOXED  */
 
 .boxed {
     max-width: 71.875rem;
     margin: 0 auto;
+    padding: 1.25rem;
 }
 
-/* PADDING  */
+/* FLEX  */
 
-.padding20 { padding: 1.25rem; }
-
-
+.row {
+    display: flex;
+    flex-wrap: wrap; 
+}
 /* LINK  */
 
 .a-noline {
@@ -81,14 +81,21 @@ a:hover {
 
 .btn-blue:active { transform: translate(0em, 0.2em); }
 
-
 ul { list-style-type: none; }
+
+.margin-0-auto { margin: 0 auto; }
+
+img { width: 50% }
+
+.img-rounded { border-radius: 50%; }
+
+p { line-height: 1,4;}
 
 /* HEADER  */
 
 header {
     height: 5rem;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
@@ -96,3 +103,81 @@ header {
     z-index: 100;
 }
 
+nav { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: flex;
+    align-items: center;
+}
+
+.link-nav {
+    display: flex;
+    align-items: center;
+    gap: 1;
+}
+
+.link-nav li {
+    padding-right: .9375rem;
+}
+
+/* MAIN  */
+
+/* HERO SCETION  */
+
+.col { 
+    padding: .9375rem;
+    width: 100%;
+    border: 2px dashed darkcyan;
+ }
+
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* SECTION 2 */
+
+.row { 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* SECTION 3 */
+
+
+/* MEDIA QUERY max 479px  */
+
+@media screen and (max-width: 479px) {
+    .link-nav {
+        display: none;
+    }
+}
+
+
+/* MEDIA QUERY  */
+
+@media screen and ( min-width: 30rem ) and ( max-width: 48.75rem ){
+    .link-nav {
+        display: none;
+    }
+}
+
+
+
+/* MEDIA QUERY 781PX  */
+
+@media screen and ( min-width: 48.8125rem ) {
+    .hamburger {
+        display: none;
+    }
+}
